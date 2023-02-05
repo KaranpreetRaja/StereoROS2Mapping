@@ -1,3 +1,8 @@
+# Author: Karanpreet Raja
+
+
+
+
 # installed nividia drivers
 sudo apt install nvidia-driver-515 nvidia-dkms-515
 sudo apt upgrade
