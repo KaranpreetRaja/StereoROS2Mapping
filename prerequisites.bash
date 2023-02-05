@@ -1,5 +1,5 @@
 # Author: Karanpreet Raja
-
+# This the installation shell script for everything you need in order to use this ROS2 code in order to get the stero camera working
 
 
 
