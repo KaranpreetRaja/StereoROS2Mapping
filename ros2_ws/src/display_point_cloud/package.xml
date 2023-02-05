@@ -4,7 +4,7 @@
   <name>display_point_cloud</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="86526687+KaranpreetRaja@users.noreply.github.com">karan</maintainer>
+  <maintainer email="Karanpreet.singh.raja@gmail.com">karan</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>[deps]</depend>
