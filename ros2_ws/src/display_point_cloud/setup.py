@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "test_node = display_point_cloud.3d_point_input:main"
         ],
     },
 )
