@@ -33,12 +33,20 @@ $ sudo apt-get -y install cuda
 For your own custom device, please install the correct latest version of CUDA from the link below:
 https://developer.nvidia.com/cuda-downloads?
 
-
+## ZED SDK Installation
+Install the SDK for your respective system: https://download.stereolabs.com/zedsdk/3.8/cu117/ubuntu22. Then make it an executable and run it.
+```bash
+$ cd <path/to/downloaded/file>
+$ sudo apt install zstd
+$ chmod +x ZED_SDK_Ubuntu22_cuda11.7_v3.8.2.zstd.run
+$ ./ZED_SDK_Ubuntu22_cuda11.7_v3.8.2.zstd.run
+```
 
 
 ### Install and build the zed_ros2_wrapper
 The zed2_ros2_wrapper is what allows ros2 to communicate with the zed2 camera, install and build as follows:
 ```bash
+$ sudo apt install python3-rosdep2 # install rosdep2 for python 3 if you already dont have it
 $ cd ~/ros2_ws/src/ #use your current ros2 workspace folder
 $ git clone  --recursive https://github.com/stereolabs/zed-ros2-wrapper.git
 $ cd ..
