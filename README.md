@@ -35,6 +35,20 @@ https://developer.nvidia.com/cuda-downloads?
 
 
 
+
+### Install and build the zed_ros2_wrapper
+The zed2_ros2_wrapper is what allows ros2 to communicate with the zed2 camera, install and build as follows:
+```bash
+$ cd ~/ros2_ws/src/ #use your current ros2 workspace folder
+$ git clone  --recursive https://github.com/stereolabs/zed-ros2-wrapper.git
+$ cd ..
+$ rosdep install --from-paths src --ignore-src -r -y
+$ colcon build --symlink-install --cmake-args=-DCMAKE_BUILD_TYPE=Release
+$ echo source $(pwd)/install/local_setup.bash >> ~/.bashrc
+$ source ~/.bashrc
+```
+
+
 You need to restart your system for changes to take place:
 ```bash
 $ sudo reboot
