@@ -10,23 +10,16 @@ sudo apt upgrade
 # in order to test if this worked, do `nividia-smi`
 
 
+# install nvidia cuda toolkit
+sudo apt-get install nvidia-cuda-toolkit
+
+
 
 cd ~/Downloads
 
 
 # For another version, get the updated link from the following: https://www.stereolabs.com/developers/release/ 
 wget https://download.stereolabs.com/zedsdk/3.8/cu117/ubuntu22 
-
-
-
-sudo apt install zstd
-
-
-chmod +x ZED_SDK_Ubuntu22_cuda11.7_v3.8.2.zstd.run
-
-./ZED_SDK_Ubuntu22_cuda11.7_v3.8.2.zstd.run
-
-
 
 
 
@@ -41,6 +34,27 @@ sudo apt-get update
 sudo apt-get -y install cuda
 
 
+# install the zed sdk
+sudo apt install zstd
+chmod +x ZED_SDK_Ubuntu22_cuda11.7_v3.8.2.zstd.run
+./ZED_SDK_Ubuntu22_cuda11.7_v3.8.2.zstd.run
+
+
+
 
 #Now that Installation Is done, Reboot
 sudo reboot
+
+
+
+
+sudo apt install python3-rosdep2
+
+$ cd ~/ros2_ws/src/ #use your current ros2 workspace folder
+$ git clone  --recursive https://github.com/stereolabs/zed-ros2-wrapper.git
+$ cd ..
+$ rosdep install --from-paths src --ignore-src -r -y
+$ colcon build --symlink-install --cmake-args=-DCMAKE_BUILD_TYPE=Release
+$ echo source $(pwd)/install/local_setup.bash >> ~/.bashrc
+$ source ~/.bashrc
+
